@@ -102,11 +102,11 @@ const App: React.FC = () => {
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row gap-12 items-center">
              <div className="w-full md:w-1/2">
-                <div className="relative p-2 bg-gradient-to-tr from-red-500 to-yellow-500 rounded-[2rem] shadow-2xl">
+                <div className="relative p-2 bg-gradient-to-tr from-red-500 to-yellow-500 rounded-[2rem] shadow-2xl overflow-hidden group">
                   <img 
                     src="https://picsum.photos/id/42/800/600" 
                     alt="Khai giảng" 
-                    className="rounded-[1.8rem] w-full"
+                    className="rounded-[1.8rem] w-full transition-transform duration-500 group-hover:scale-110"
                   />
                 </div>
              </div>
@@ -144,19 +144,19 @@ const App: React.FC = () => {
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-            <div className="p-6 bg-white/10 rounded-2xl backdrop-blur-sm">
+            <div className="p-6 bg-white/10 rounded-2xl backdrop-blur-sm transition-transform hover:scale-110">
               <span className="text-4xl font-black block mb-2">03</span>
               <span className="text-red-100 text-sm font-semibold uppercase tracking-wider">Cán bộ quản lý</span>
             </div>
-            <div className="p-6 bg-white/10 rounded-2xl backdrop-blur-sm">
+            <div className="p-6 bg-white/10 rounded-2xl backdrop-blur-sm transition-transform hover:scale-110">
               <span className="text-4xl font-black block mb-2">66</span>
               <span className="text-red-100 text-sm font-semibold uppercase tracking-wider">Giáo viên</span>
             </div>
-            <div className="p-6 bg-white/10 rounded-2xl backdrop-blur-sm">
+            <div className="p-6 bg-white/10 rounded-2xl backdrop-blur-sm transition-transform hover:scale-110">
               <span className="text-4xl font-black block mb-2">01</span>
               <span className="text-red-100 text-sm font-semibold uppercase tracking-wider">Hành chính</span>
             </div>
-            <div className="p-6 bg-white/10 rounded-2xl backdrop-blur-sm">
+            <div className="p-6 bg-white/10 rounded-2xl backdrop-blur-sm transition-transform hover:scale-110">
               <span className="text-4xl font-black block mb-2">04</span>
               <span className="text-red-100 text-sm font-semibold uppercase tracking-wider">Lao động hợp đồng</span>
             </div>
@@ -173,17 +173,17 @@ const App: React.FC = () => {
             </div>
 
             <div className="grid md:grid-cols-3 gap-8 mb-16">
-               <div className="bg-gray-50 p-6 rounded-2xl text-center">
+               <div className="bg-gray-50 p-6 rounded-2xl text-center transition-all duration-300 hover:scale-105 hover:shadow-xl hover:bg-white border border-transparent hover:border-red-100 cursor-default">
                   <h4 className="font-bold text-gray-800 mb-2">Điểm trung tâm</h4>
                   <p className="text-2xl font-bold text-red-600">7.505 m²</p>
                   <p className="text-gray-500 text-sm">8,91 m²/học sinh</p>
                </div>
-               <div className="bg-gray-50 p-6 rounded-2xl text-center">
+               <div className="bg-gray-50 p-6 rounded-2xl text-center transition-all duration-300 hover:scale-105 hover:shadow-xl hover:bg-white border border-transparent hover:border-red-100 cursor-default">
                   <h4 className="font-bold text-gray-800 mb-2">Điểm Nà Nong</h4>
                   <p className="text-2xl font-bold text-red-600">3.547 m²</p>
                   <p className="text-gray-500 text-sm">11,36 m²/học sinh</p>
                </div>
-               <div className="bg-gray-50 p-6 rounded-2xl text-center">
+               <div className="bg-gray-50 p-6 rounded-2xl text-center transition-all duration-300 hover:scale-105 hover:shadow-xl hover:bg-white border border-transparent hover:border-red-100 cursor-default">
                   <h4 className="font-bold text-gray-800 mb-2">Điểm Phiêng Tìn</h4>
                   <p className="text-2xl font-bold text-red-600">2.240 m²</p>
                   <p className="text-gray-500 text-sm">28,71 m²/học sinh</p>
@@ -192,7 +192,7 @@ const App: React.FC = () => {
 
             <div className="grid md:grid-cols-2 gap-12">
                <div className="space-y-6">
-                  <div className="bg-green-50 p-6 rounded-2xl border border-green-100">
+                  <div className="bg-green-50 p-6 rounded-2xl border border-green-100 transition-all hover:shadow-md hover:scale-[1.01]">
                      <div className="flex gap-4 items-start">
                         <BookOpen className="text-green-600 shrink-0 mt-1" />
                         <div>
@@ -204,7 +204,7 @@ const App: React.FC = () => {
                         </div>
                      </div>
                   </div>
-                  <div className="bg-yellow-50 p-6 rounded-2xl border border-yellow-100">
+                  <div className="bg-yellow-50 p-6 rounded-2xl border border-yellow-100 transition-all hover:shadow-md hover:scale-[1.01]">
                      <div className="flex gap-4 items-start">
                         <Heart className="text-yellow-600 shrink-0 mt-1" />
                         <div>
@@ -218,10 +218,10 @@ const App: React.FC = () => {
                   </div>
                </div>
                <div className="grid grid-cols-2 gap-4">
-                  <img src="https://picsum.photos/id/119/400/300" className="rounded-xl w-full h-40 object-cover shadow-md" alt="Thư viện" />
-                  <img src="https://picsum.photos/id/120/400/300" className="rounded-xl w-full h-40 object-cover shadow-md" alt="Lớp học" />
-                  <img src="https://picsum.photos/id/122/400/300" className="rounded-xl w-full h-40 object-cover shadow-md" alt="Sân chơi" />
-                  <img src="https://picsum.photos/id/123/400/300" className="rounded-xl w-full h-40 object-cover shadow-md" alt="Khuôn viên" />
+                  <img src="https://picsum.photos/id/119/400/300" className="rounded-xl w-full h-40 object-cover shadow-md transition-transform hover:scale-105" alt="Thư viện" />
+                  <img src="https://picsum.photos/id/120/400/300" className="rounded-xl w-full h-40 object-cover shadow-md transition-transform hover:scale-105" alt="Lớp học" />
+                  <img src="https://picsum.photos/id/122/400/300" className="rounded-xl w-full h-40 object-cover shadow-md transition-transform hover:scale-105" alt="Sân chơi" />
+                  <img src="https://picsum.photos/id/123/400/300" className="rounded-xl w-full h-40 object-cover shadow-md transition-transform hover:scale-105" alt="Khuôn viên" />
                </div>
             </div>
         </div>

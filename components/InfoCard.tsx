@@ -16,9 +16,9 @@ const InfoCard: React.FC<InfoCardProps> = ({ title, content, icon, variant = 'wh
   };
 
   return (
-    <div className={`p-6 rounded-2xl border transition-all hover:shadow-xl hover:-translate-y-1 ${styles[variant]}`}>
+    <div className={`p-6 rounded-2xl border transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 hover:scale-[1.03] cursor-default ${styles[variant]}`}>
       <div className="flex items-center gap-4 mb-4">
-        {icon && <div className="p-3 bg-white rounded-xl shadow-sm">{icon}</div>}
+        {icon && <div className="p-3 bg-white rounded-xl shadow-sm transform transition-transform group-hover:rotate-6">{icon}</div>}
         <h3 className="text-xl font-bold uppercase tracking-wide">{title}</h3>
       </div>
       <p className="leading-relaxed whitespace-pre-line text-sm md:text-base">
